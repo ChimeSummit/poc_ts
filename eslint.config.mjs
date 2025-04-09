@@ -3,6 +3,7 @@ import tseslint from "typescript-eslint";
 import unusedImports from "eslint-plugin-unused-imports";
 
 export default defineConfig([
+    tseslint.configs.strict,
     {
     files: ["**/*.ts"],
         ignores: ["*.mjs"],
@@ -15,7 +16,7 @@ export default defineConfig([
         plugins: {
         "@typescript-eslint": tseslint.plugin,
         "unused-imports": unusedImports },
-    rules: {...tseslint.configs.recommendedTypeChecked[0].rules,
+    rules: {
       "@typescript-eslint/typedef": ["error", {
         "arrayDestructuring": true,
         "arrowParameter": true,
