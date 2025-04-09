@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "lint:check": "eslint src",
     "lint:fix": "eslint . --fix",
     "format:fix": "prettier --write",
-    "check": "tsc --noEmit false",
-    "build:strict": "npm run check && tsc"
+    "build": "tsc --noEmit false"
   },
   "devDependencies": {
     "eslint": "^9.23.0",
+    "eslint-plugin-unused-imports": "^4.1.4",
     "prettier": "^3.2.5",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2",
