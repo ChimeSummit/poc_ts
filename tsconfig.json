@@ -7,7 +7,7 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "noEmitOnError": true,
-    "skipLibCheck": false, // remove to speed up build or if you encounter to many false positives
+    "skipLibCheck": true, // skip checking d.ts files
     "forceConsistentCasingInFileNames": true,
     "outDir": "dist"
   },
