@@ -1,17 +1,23 @@
 {
   "name": "poc_ts_config",
   "version": "1.0.0",
+  "type": "module",
   "description": "",
   "scripts": {
-    "lint:check": "eslint src",
+    "lint:check": "eslint .",
     "lint:fix": "eslint . --fix",
+    "lint:remove-unused-imports": "eslint src --fix --rule 'unused-imports/no-unused-imports: error' .",
     "format:fix": "prettier --write",
+    "format:imports": "prettier --write --plugin-search-dir=./node_modules ./**/*.ts",
+    "clean-imports": "npm run lint:remove-unused-imports && npm run format:imports",
+    "fix-imports": "",
     "build": "tsc --noEmit false"
   },
   "devDependencies": {
     "eslint": "^9.23.0",
     "eslint-plugin-unused-imports": "^4.1.4",
     "prettier": "^3.2.5",
+    "prettier-plugin-organize-imports": "^4.1.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2",
     "typescript-eslint": "^8.28.0"

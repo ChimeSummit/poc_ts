@@ -3,17 +3,19 @@ import tseslint from "typescript-eslint";
 import unusedImports from "eslint-plugin-unused-imports";
 
 export default defineConfig([
-    ...tseslint.configs.recommendedTypeChecked,
     {
     files: ["**/*.ts"],
+        ignores: ["*.mjs"],
     languageOptions: {
       parser: tseslint.parser,
       parserOptions: {
         project: "./tsconfig.json",
       },
     },
-        plugins: { "unused-imports": unusedImports },
-    rules: {
+        plugins: {
+        "@typescript-eslint": tseslint.plugin,
+        "unused-imports": unusedImports },
+    rules: {...tseslint.configs.recommendedTypeChecked[0].rules,
       "@typescript-eslint/typedef": ["error", {
         "arrayDestructuring": true,
         "arrowParameter": true,
