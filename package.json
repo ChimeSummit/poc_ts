@@ -6,10 +6,10 @@
   "scripts": {
     "lint:check": "eslint .",
     "lint:fix": "eslint . --fix",
-    "lint:imports": "eslint src --fix --rule 'unused-imports/no-unused-imports: error' .",
+    "lint:imports": "eslint . --fix --rule 'unused-imports/no-unused-imports: error' .",
     "format:fix": "prettier --write",
-    "format:imports": "prettier --write --plugin-search-dir=./node_modules ./**/*.ts",
-    "format:clean": "npm run lint:imports && npm run format:imports",
+    "format:imports": "prettier --write ./**/*.ts",
+    "clean": "npm run lint:fix && npm run format:imports",
     "build": "npm run lint:check && tsc --noEmit false"
   },
   "devDependencies": {

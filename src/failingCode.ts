@@ -1,4 +1,7 @@
-import node from "node";
+import z from "z";
+import a from "a";
+import { unused } from "./unused";
+import { b } from "./b";
 
 
 // 1. Using `any` type, which should trigger `@typescript-eslint/no-explicit-any`
@@ -20,4 +23,4 @@ let message = "Hello, world!";  // This should be `const` but we are using `let`
 console.log("This is a console log!");  // Using console.log triggers the `no-console` rule.
 
 
-const wtf = "adfd";
+const wtf = a + b + z;

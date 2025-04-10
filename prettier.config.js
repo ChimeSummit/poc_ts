@@ -1,3 +1,5 @@
-module.exports = {
-    plugins: [require('prettier-plugin-organize-imports')],
+import organizeImports from 'prettier-plugin-organize-imports';
+
+export default {
+    plugins: [organizeImports],
 };

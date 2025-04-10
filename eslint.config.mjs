@@ -3,7 +3,6 @@ import tseslint from "typescript-eslint";
 import unusedImports from "eslint-plugin-unused-imports";
 
 export default defineConfig([
-    tseslint.configs.strict,
     {
     files: ["**/*.ts"],
         ignores: ["*.mjs"],
