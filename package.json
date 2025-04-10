@@ -7,6 +7,7 @@
     "lint:check": "eslint .",
     "lint:fix": "eslint . --fix",
     "lint:imports": "eslint . --fix --rule 'unused-imports/no-unused-imports: error' .",
+    "prettier:check": "prettier --check ./**/*.ts",
     "format:fix": "prettier --write",
     "format:imports": "prettier --write ./**/*.ts",
     "clean": "npm run lint:fix && npm run format:imports",

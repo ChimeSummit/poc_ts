@@ -16,6 +16,7 @@ export default defineConfig([
         "@typescript-eslint": tseslint.plugin,
         "unused-imports": unusedImports },
     rules: {
+        "semi": ["error", "always"],
       "@typescript-eslint/typedef": ["error", {
         "arrayDestructuring": true,
         "arrowParameter": true,

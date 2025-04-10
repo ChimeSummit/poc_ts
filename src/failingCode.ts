@@ -15,6 +15,7 @@ bar()
 
 // 2. Unused variable, should trigger `@typescript-eslint/no-unused-vars`
 let unusedVar = "I'm not used anywhere";
+let nu: Number = '10'
 
 // 3. Assigning `let` when `const` is preferred, should trigger `prefer-const`
 let message = "Hello, world!";  // This should be `const` but we are using `let` for testing.
